@@ -8,7 +8,6 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
 body {
     position: absolute;
     align-content: center;
@@ -26,16 +25,19 @@ main {
 cont {
     position: relative;
     display: grid;
-    grid-template-columns: 48% 48%;
-    grid-template-rows: 48% 48%;
-    margin: 1%;
-    min-width: 92%;
-    min-height: 86%;
+    min-width: 98%;
+    margin: 0 auto;
+    gap: 1rem;
 }
-
+@media (min-width: 1000px) {
+    cont { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+  }
 cont_text {
-    position: relative;
-    margin: 2%;
+    color: white;
+    padding: 0.5rem;
+    min-height: 8rem;
 }
 
 img {
@@ -98,11 +100,6 @@ li a {
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
     border: 1px solid rgb(255, 255, 255);
-}
-
-li a:hover {
-    color: rgb(0, 0, 0);
-    background-color: black;
 }
 
 .active {

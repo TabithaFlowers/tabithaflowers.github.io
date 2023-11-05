@@ -5,15 +5,14 @@ html {
     align-items: center;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 body {
     position: relative;
     align-content: center;
     margin: 1%;
-    width: 98%;
-    height: 98%;
+    min-width: 98%;
+    min-height: 98%;
     background: rgb(0, 0, 0);
 }
 
@@ -27,6 +26,7 @@ main {
 cont {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 2%;
     width: 96%;
@@ -35,12 +35,25 @@ cont {
 
 cont_text {
     position: relative;
+    flex-grow: 1;
+    flex-basis: 200;
     margin: 2%;
+    width: 40%;
 }
 
 img {
     position: relative;
-    width: 40%;
+    width: 35%;
+}
+/*? Para los dispositivos con pantalla menor a 800px, se */
+/*? aplicaran estas reglas*/
+@media (max-width: 1000px){
+    img {
+        width: 98%;
+    }
+    cont_text {
+        width: 98%;
+    }
 }
 
 h1 {
@@ -80,11 +93,6 @@ li a {
     color: rgb(255, 255, 255);
     background: rgb(0, 0, 0);
     border: 1px solid rgb(255, 255, 255);
-}
-
-li a:hover {
-    color: rgb(0, 0, 0);
-    background-color: black;
 }
 
 .active {
