@@ -1,103 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
-
-html {
-    position: relative;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
 
 body {
+    display: inline;
     position: relative;
     align-content: center;
-    margin: 1%;
-    min-width: 98%;
-    min-height: 98%;
+    margin: 0%;
     background: rgb(0, 0, 0);
+    font-family: sans-serif;
 }
 
-main {
-    display: contents;
-    position: relative;
-    align-items: center;
-    font-family: "Figtree", sans-serif;
-}
-
-cont {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 2%;
-    width: 96%;
-    height: 76%;
-}
-
-cont_text {
-    position: relative;
-    flex-grow: 1;
-    flex-basis: 200;
-    margin: 2%;
-    width: 40%;
+a {
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 1% 1%;
 }
 
 img {
     position: relative;
-    width: 35%;
-}
-/*? Para los dispositivos con pantalla menor a 800px, se */
-/*? aplicaran estas reglas*/
-@media (max-width: 1000px){
-    img {
-        width: 98%;
-    }
-    cont_text {
-        width: 98%;
-    }
-}
+    width: 34%;
+    margin: 2%;
+}   
 
 h1 {
     color: #ffffff;
+    margin: 2%;
 }
 h2 {
     color: #ffffff;
+    margin: 2%;
 }
-h3 {
+p {
     color: #ffffff;
+    font-size: large;
+    margin: 2%;
+}
+
+.cont {
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+    width: 96%;
+    z-index: -1;
+}
+
+.cont_text {
+    position: relative;
+    margin: 2%;
+    width: 66%;
+
 }
 
 /*? Menu principal*/
-ul {
-    position: static;
-    float: right;
-    height: 10%;
-    text-align: center;
-    align-items: center;
-    padding: 0;
-    margin: 1%;
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+    width: 96%;
+    margin: 2%;
+    z-index: 100;
+}
+
+.libros {
     background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(70, 73, 255);
 }
 
-li {
-    list-style-type: none;
-    display: inline;
-    background: rgb(0, 0, 0);
+.redes {
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(70, 73, 255);
 }
 
-li a {
-    font-size: 1em;
-    text-decoration: none;
-    line-height: 70px;
-    height: 10%;
-    padding: 15px 10px;
-    color: rgb(255, 255, 255);
-    background: rgb(0, 0, 0);
-    border: 1px solid rgb(255, 255, 255);
-}
-
-.active {
-    background-color: #963838;
-}
 /*? Barra de scroll*/
 ::-webkit-scrollbar {
     height: 15px;
@@ -112,4 +87,29 @@ li a {
     border-radius: 100px;
     background-image: linear-gradient(90deg, #102370 0%, #72136f 99%);
     box-shadow: inset 2px 2px 5px 0 rgba(#0d00ff, 0.5);
+}
+
+
+@media (max-width: 1000px){
+    body {
+        display: block;
+        margin:2%
+    }
+    .cont {
+        position: relative;
+        display: block;
+        justify-content: center;
+        margin: 2%;
+        width: 96%;
+    }
+    .cont_text {
+        width: 100%;
+        margin: 2%;
+    }
+    img {
+        display:block;
+        width: 96%;
+        margin: 2%;
+
+    }
 }
