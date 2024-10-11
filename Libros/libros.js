@@ -1,12 +1,6 @@
-//Para scrollear horizontalmente
-const scrollContainer = document.querySelector("cont");
-const scroll_n = 150
+const contenedor = document.querySelector('.cont');
 
-scrollContainer.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    if (evt.deltaY > 0)
-        scrollContainer.scrollLeft += evt.deltaY-scroll_n;
-    else
-        scrollContainer.scrollLeft += evt.deltaY+scroll_n;
-
+contenedor.addEventListener('wheel', (event) => {
+    event.preventDefault(); // Previene el scroll vertical
+    contenedor.scrollLeft += event.deltaY; // Desplaza horizontalmente según el scroll vertical
 });
